@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text analyzer</title>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <h1>Text analyzer</h1>
+            <p>Paste in text below, submit, and get some basic stats back.</p>
+            <form>
+                <div>
+                    <label for="user-text">Text to analyze</label>
+                    <textarea cols="60" rows="20" id="user-text" name="user-text" placeholder="Enter text" required></textarea>
+                </div>
+                <div>
+                    <button id="submit" type="button">Analyze it!</button>
+                </div>
+            </form>
+
+            <dl id="js-text-report">
+                <dt>Word count</dt>
+                <dd id="js-word-count"></dd>
+
+                <dt>Unique word count</dt>
+                <dd id="js-unique-word-count"></dd>
+
+                <dt>Average word length</dt>
+                <dd id="js-average-word-length"></dd>
+
+                <dt>Average sentence length</dt>
+                <dd id="js-average-sentence-length"></dd>
+            </dl>
+        </main>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
